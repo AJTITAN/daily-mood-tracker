@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Mood Tracker</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barriecito&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+    <button id="theme-toggle">Toggle Theme</button>
+    <div class="container-1 ">
+        <div class="inputBox">
+            <p class="landingHeading">Your Daily Mood Tracker
+            </p>
+            <div class="content-box">
+                <div class="emoji-box">
+                    <div class="emoji-icon">😄
+                        <div class="icon-meaning">Happy</div>
+                    </div>
+                    <div class="emoji-icon">😞
+                        <div class="icon-meaning">Sad</div>
+                    </div>
+                    <div class="emoji-icon">😐
+                        <div class="icon-meaning">Meh</div>
+                    </div>
+                    <div class="emoji-icon">😡
+                        <div class="icon-meaning">Angry</div>
+                    </div>
+                    <div class="emoji-icon">😴
+                        <div class="icon-meaning">Bored</div>
+                    </div>
+                    <div class="emoji-icon">🤒
+                        <div class="icon-meaning">sick</div>
+                    </div>
+                    <div class="emoji-icon">🤩
+                        <div class="icon-meaning">Excited</div>
+                    </div>
+                </div>
+                <textarea class="commentBox" name="hi" id="" placeholder="Any Comments you wanna add " rows="6" cols="40" aria-setsize="9"></textarea>
+
+                <div class="buttons">
+                    <button class="mood-submit-btn">submit</button>
+                    <button class="mood-calendar-btn">View In Calendar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-2 ">
+        <div class="calendar-container">
+            <h3>Click on the dates to see the moods</h3>
+            <h2 id="month-year"></h2>
+            <div class="calendar">
+                <div class="day">Sun</div>
+                <div class="day">Mon</div>
+                <div class="day">Tue</div>
+                <div class="day">Wed</div>
+                <div class="day">Thu</div>
+                <div class="day">Fri</div>
+                <div class="day">Sat</div>
+            </div>
+        </div>
+        <button class="mood-select-btn">mood Selector</button>
+    </div>
+    <script src="index.js"></script>
+</body>
+        
+
+
+</html>

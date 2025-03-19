@@ -1,0 +1,378 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    font-family: "Roboto", sans-serif;
+    
+}
+:root {
+    --bg-color: #ffffff;
+    --text-color: #000000;
+    --container-bg: #f7f7f7;
+    --calendar-bg: #ffffff;
+    --emoji-bg: #e0e0e0;
+}
+
+.dark-mode {
+    --bg-color: #121212;
+    --text-color: #ffffff;
+    --container-bg: #1e1e1e;
+    --calendar-bg: #2a2a2a;
+    --emoji-bg: #333333;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: all 0.3s ease-in-out;
+}
+
+.container-1, .container-2 {
+    background-color: var(--container-bg);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.calendar-container {
+    background-color: var(--calendar-bg);
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.emoji-box {
+    background-color: var(--emoji-bg);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#theme-toggle {
+    background: #f39c12;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+
+#theme-toggle:hover {
+    background: #e67e22;
+}
+.container-1 {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.inputBox{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    border-radius: 20px ;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    border: #F5ECE0 solid;
+    padding: 2rem;
+    align-items: center;
+    gap: 2.5rem;
+}
+.emoji-box {
+    display: flex;
+}
+
+.landingHeading {
+    font-family: "Barriecito", system-ui;
+    font-size: 2.5rem;
+    text-align: center;
+    
+}
+.content-box{
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    align-items: center;
+    gap: 1rem;
+}
+.icon-meaning {
+    visibility: hidden;
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 5px 8px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 110%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 14px;
+    opacity: 0;
+    transition: opacity 0.9s;
+}
+
+.emoji-icon {
+    font-size: 1.4rem;
+    position: relative;
+    cursor: pointer;
+}
+.emoji-icon:hover{
+    font-size:1.8rem;
+    transition: all 0.5s ease-out allow-discrete;
+}
+.emoji-icon:hover .icon-meaning {
+    visibility: visible;
+    opacity: 0.6;
+}
+.commentBox{
+    resize: none;
+    padding: 10px;
+    background-color: #F5ECE0;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    border-radius: 10px;
+}
+.buttons{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+.mood-submit-btn{
+    cursor: pointer;
+    font-size: large;
+    background-color: #5F99AE;
+    padding:10px;
+    
+    border-radius: 4px;
+}
+.mood-submit-btn:hover{
+    background-color: #418aa4;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transition: all 0.5s ease-in-out;
+}
+.mood-calendar-btn{
+    cursor: pointer;
+    font-size: large;
+    padding:10px;
+    border-radius: 4px;
+    background-color: #F5ECE0;
+}
+.mood-select-btn{
+    cursor: pointer;
+    font-size: large;
+    background-color: #5F99AE;
+    padding:10px;
+    
+    border-radius: 4px;
+}
+.mood-select-btn:hover{
+    background-color: #418aa4;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transition: all 0.5s ease-in-out;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* container 2 css */
+.container-2 {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+}
+.calendar-container {
+    text-align: center;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.calendar-header button {
+    background: #3498db;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+    width: 350px;
+    text-align: center;
+}
+.day, .date {
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+}
+.day {
+    background: #3498db;
+    color: white;
+    border-radius: 5px;
+}
+.date {
+    background: #ecf0f1;
+    width: auto;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+.date:hover {
+    background: #d1d8e0;
+}
+.date.today {
+    background: #2ecc71;
+    color: white;
+}
+.date.empty {
+    background: transparent;
+    cursor: default;
+}
+
+/* displays */
+
+
+.display-hide{
+    display:none;
+}
+.emoji-icon-shadow{
+    border-radius: 50%;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+#moodModal {
+    overflow-x: scroll;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    z-index: 1000;
+    display: none;
+    width: 300px;
+}
+
+#moodModal p {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+#moodModal button {
+    margin-top: 10px;
+    padding: 8px 12px;
+    background: #f39c12;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#moodModal button:hover {
+    background: #e67e22;
+}
+
+#modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    display: none;
+    z-index: 999;
+}
+.dark-mode .calendar-container {
+    background-color: var(--calendar-bg);
+    color: var(--text-color);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+.dark-mode .day {
+    background: #555;
+    color: white;
+}
+
+.dark-mode .date {
+    background: #333;
+    color: white;
+}
+
+.dark-mode .date:hover {
+    background: #444;
+}
+
+.dark-mode .date.today {
+    background: #27ae60; 
+}
+.dark-mode #moodModal {
+    background: #1e1e1e;
+    color: white;
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
+}
+
+.dark-mode #moodModal p {
+    color: #ddd;
+}
+
+.dark-mode #moodModal button {
+    background: #f39c12;
+    color: white;
+}
+
+.dark-mode #moodModal button:hover {
+    background: #e67e22;
+}
+
+.dark-mode #modalOverlay {
+    background: rgba(0, 0, 0, 0.6);
+}
+#theme-toggle {
+    background: #f39c12;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    position: fixed; 
+    top: 15px;
+    right: 15px;
+    z-index: 1000; 
+}
